@@ -3,6 +3,10 @@
 
 
 #include <Bounce2.h>
+#include <MIDI.h>
+
+
+
 
 // ANALOG POTS
 // declare variables for reading analog pot pins
