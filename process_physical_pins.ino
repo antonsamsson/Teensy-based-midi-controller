@@ -23,7 +23,7 @@ void StompSwitchMode(int stompSwitch,int toggleSwitch) {
 
 
 
-// LEDs
+//----- LEDS
 
 void LedBrightness(int led, int pot) {
   ledBrightness[led] = analogPotValue[pot] * 2;
@@ -34,13 +34,9 @@ void LedBrightness(int led, int pot) {
 
 }
 
-// standardfunktion - ifall jag bara vill styra LED med 
-//stomp
-
+// standardfunktion - ifall jag bara vill styra LED med stomp
 
 void LedControlledByStomp(int led, int stomp) {
-  //om stompSwitchValue = 1 vill jag att led ska lysa, med ledbrightness styrka
-  //om stompSwitchValue = 0 vill jag att den ska vara släckt
 
   if (stompSwitchValue[stomp] == 0) {
     analogWrite(ledPin[led], 0);
@@ -48,9 +44,6 @@ void LedControlledByStomp(int led, int stomp) {
     analogWrite(ledPin[led], ledBrightness[led]);
   }
 }
-
-
-
 
 
 //------ OLD LED

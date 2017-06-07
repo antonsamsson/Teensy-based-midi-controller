@@ -1,3 +1,5 @@
+//----- ANALOG POTS
+
 void ReadAnalogPots() {
   for (int i = 0; i < numberOfAnalogPots; i++) {
     int localPot = (analogRead(analogPotPins[i]) / 4 + oldAnalogPotReading[i]) / 2;
@@ -11,7 +13,7 @@ void ReadAnalogPots() {
 }
 
 
-// Toggle SWITCHES
+//----- TOGGLE SWITCHES
 
 void ReadToggleSwitches() {
 
@@ -81,7 +83,7 @@ void ReadToggleSwitches() {
 }
 
 
-//------------LEDS
+//----- LEDS
 
 void LedWrite() {
   for (int i = 0; i < numberOfLeds; i++) {
@@ -90,7 +92,7 @@ void LedWrite() {
 }
 
 
-// ------------STOMP SWITCHES
+//----- STOMP SWITCHES
 
 void ReadStompSwitches() {
 
@@ -113,9 +115,6 @@ void ReadStompSwitches() {
     Serial.println((String)"StompSwitch 1: " + stompSwitchPressed[0]);
   }
 
-  //oldStompSwitchPressed[0] = stompSwitchPressed[0];
-
-
 
   // STOMP SWITCH 2
 
@@ -129,9 +128,6 @@ void ReadStompSwitches() {
 
     Serial.println((String)"StompSwitch 2: " + stompSwitchPressed[1]);
   }
-
-  //oldStompSwitchPressed[1] = stompSwitchPressed[1];
-
 
 
   // STOMP SWITCH 3
@@ -147,7 +143,6 @@ void ReadStompSwitches() {
     Serial.println((String)"StompSwitch 3: " + stompSwitchPressed[2]);
   }
 
-  //oldStompSwitchPressed[2] = stompSwitchPressed[2];
 
   // STOMP SWITCH 4
 
@@ -161,7 +156,5 @@ void ReadStompSwitches() {
 
     Serial.println((String)"StompSwitch 4: " + stompSwitchPressed[3]);
   }
-
-  //oldStompSwitchPressed[3] = stompSwitchPressed[3];
 
 }
